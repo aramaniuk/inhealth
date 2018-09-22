@@ -39,22 +39,187 @@
                     legendText: "{label}",
                     indexLabel: "{label}: #percent%",
                     dataPoints: [
-                        {label: "", y: x},
-                        {label: "", y: y},
-                        {label: "", y: z}
+                        {label: "Physical Activities", y: x},
+                        {label: "Following Goals", y: y},
+                        {label: "Healthy Lifestyle", y: z}
                     ]
                 }]
             };
             $("#chartContainer").CanvasJSChart(options);
         }
     </script>
+
+    <style>
+        .jumbotron {
+            position: relative;
+            z-index: -101;
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -100;
+            width: 100%;
+        }
+    </style>
+
+
 </head>
 <body>
 <!-- As a heading -->
 <nav class="navbar navbar-light bg-light">
     <span class="navbar-brand mb-0 h1">InHealth</span>
+    <span class="navbar-text" style="color: black">USER ID=234</span>
 </nav>
 
+<div class="jumbotron w-50 p-10">
+    <video id="video-background" preload muted autoplay loop>
+        <source src="Wakeboarding_on_the_Lake.mp4" type="video/mp4">
+    </video>
+    <div style="background-color: white">
+        <div class="container">
+            <div class="row text-center align-items-center h2">
+                <div class="col " style="background: white">
+                    <span>Your Health Score is: 435</span>
+                    <span style="color: green">(&uarr;23)</span>
+                </div>
+            </div>
+            <div class="row text-center align-items-center h2">
+                <div class="col" style="background: white">
+                    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                </div>
+            </div>
+            <div class="row text-center align-items-center">
+                <div class="col" style="background: white">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center align-items-center">
+                <div class="col" style="background: white">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="container border-top border-primary">
+                                <div class="row">
+                                    <div class="col">
+                                        <img class="align-self-center mr-3" src="challenge1.png" alt="1">
+                                    </div>
+                                    <div class="col">
+                                        <p class="left">September 60 km walk Most km walking/orienting</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="text-right">Participants 4381</p>
+                                    </div>
+                                </div>
+                                <div class="row border-bottom border-primary">
+                                    <div class="col"></div>
+                                    <div class="col">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 97%;" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100">97%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                            <div class="container border-top border-bottom border-primary">
+                                <div class="row">
+                                    <div class="col">
+                                        <img class="align-self-center mr-3" src="challenge2.png" alt="1">
+                                    </div>
+                                    <div class="col">
+                                        <p class="left">Burn most calories until November 1</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="text-right">Participants 3149</p>
+                                    </div>
+                                </div>
+                                <div class="row border-bottom border-primary">
+                                    <div class="col"></div>
+                                    <div class="col">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 67%;" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">67%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                            <div class="container border-bottom border-primary">
+                                <div class="row">
+                                    <div class="col">
+                                        <img class="align-self-center mr-3" src="challenge3.png" alt="1">
+                                    </div>
+                                    <div class="col">
+                                        <p class="left">2018 - 2018 km Run most km in 2018 year</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="text-right">Participants: 5384</p>
+                                    </div>
+                                </div>
+                                <div class="row border-bottom border-primary">
+                                    <div class="col"></div>
+                                    <div class="col">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center align-items-center">
+                <div class="col" style="background: white">
+                </div>
+            </div>
+            <div class="row text-center align-items-center">
+                <div class="col" style="height : 10px;">
+                </div>
+            </div>
+        </div>
+        <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+    </div>
+</div>
+
+<!--
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+
+
+
+<form class="form-inline" action="/action_page.php"  target="_self" method="post">
+    <div class="form-group mb-2">
+        <label for="staticID" class="sr-only">ID</label>
+        <input type="text" readonly class="form-control-plaintext" name="staticID" id="staticID" value="USER ID = 1">
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+        <label for="inputDate" class="sr-only">Date</label>
+        <input type="date" class="form-control" name="inputDate" id="inputDate" placeholder="Date">
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+        <label for="inputSteps" class="sr-only">Steps</label>
+        <input type="number" class="form-control" name="inputSteps" id="inputSteps" placeholder="Steps">
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+        <label for="inputFeel" class="sr-only">Feel</label>
+        <input type="number" class="form-control" name="inputFeel" id="inputFeel" placeholder="Feel">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Send Data</button>
+</form>
 <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+-->
+
+
 </body>
 </html>
